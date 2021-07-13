@@ -1,6 +1,7 @@
 #! /bin/sh
 # Colors and palette method stolen from dylanaraps pftech: https://github.com/dylanaraps/pfetch
 
+c0='[0m'
 c1='[31m'; c2='[32m'
 c3='[33m'; c4='[34m'
 c5='[35m'; c6='[36m'
