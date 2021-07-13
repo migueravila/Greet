@@ -1,0 +1,38 @@
+#! /bin/sh
+# Colors and palette method stolen from dylanaraps pftech: https://github.com/dylanaraps/pfetch
+
+
+c1='[31m'; c2='[32m'
+c3='[33m'; c4='[34m'
+c5='[35m'; c6='[36m'
+c7='[37m'; c8='[38m'
+c9='^[[37m'
+
+# c1 is red
+# c2 is green 
+# c3 is yellow
+# c4 is blue
+# c5 is violet
+# c6 is 
+
+# Get user
+user="Miguel"
+
+# Greeting message
+
+h=`date +%H`
+
+if [ $h -lt 12 ]; then
+  greet="Good ${c3}Morning 🌄 "
+elif [ $h -lt 18 ]; then
+  greet="Good ${c4}Afternoon 🏙️ "
+else
+  greet="Good ${c5}Night 🌉 "
+fi
+
+# Print
+cat <<-EOF
+
+ Hi ${c2}${user}${c0}, ${greet}
+
+EOF
