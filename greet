@@ -1,7 +1,6 @@
 #! /bin/sh
 # Colors and palette method stolen from dylanaraps pftech: https://github.com/dylanaraps/pfetch
 
-
 c1='[31m'; c2='[32m'
 c3='[33m'; c4='[34m'
 c5='[35m'; c6='[36m'
@@ -13,7 +12,7 @@ c9='^[[37m'
 # c3 is yellow
 # c4 is blue
 # c5 is violet
-# c6 is 
+# c6 is celest
 
 # Get user
 user="Miguel"

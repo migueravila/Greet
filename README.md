@@ -10,3 +10,36 @@
 3. Run `sudo make install`
 4. Now you can run it with `greet` 
 5. ENJOY! 💻
+
+
+### Customization
+
+Here you can change the name for the greeting:
+
+```sh
+# Get user
+user="Miguel"
+```
+And change the greeting message:
+
+```sh
+if [ $h -lt 12 ]; then
+  greet="Good ${c3}Morning 🌄 "
+elif [ $h -lt 18 ]; then
+  greet="Good ${c4}Afternoon 🏙️ "
+else
+  greet="Good ${c5}Night 🌉 "
+fi
+```
+
+Also the structure of the message:
+
+```sh
+# Print
+cat <<-EOF
+
+ Hi ${c2}${user}${c0}, ${greet}
+
+EOF
+
+```
