@@ -25,7 +25,7 @@ h=`date +%H`
 if [ $h -lt 12 ]; then
   greet="Good ${c3}Morning 🌄 "
 elif [ $h -lt 18 ]; then
-  greet="Good ${c4}Afternoon 🏙️ "
+  greet="Good ${c4}Afternoon 🌆 "
 else
   greet="Good ${c5}Night 🌉 "
 fi
