@@ -1,6 +1,6 @@
 <div align="center">
     <h1>Greet</h1>
-    <b>🪴 A simple greeting message for your shelle</b>
+    <b>🌿 A simple greeting message for your shelle</b>
 </div>
 
 ### Installation
