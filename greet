@@ -1,21 +1,35 @@
 #! /bin/sh
-# Colors and palette method stolen from dylanaraps pftech: https://github.com/dylanaraps/pfetch
 
-c0='[0m'
-c1='[31m'; c2='[32m'
-c3='[33m'; c4='[34m'
-c5='[35m'; c6='[36m'
-c7='[37m'; c8='[38m'
-c9='^[[37m'
+# ┌─┐┬─┐┌─┐┌─┐┌┬┐
+# │ ┬├┬┘├┤ ├┤  │
+# └─┘┴└─└─┘└─┘ ┴
 
 # Get user
 user="Miguel"
+showWeather="true"
+
+# Colors and palette method stolen
+# from dylanaraps pftech:
+# https://github.com/dylanaraps/pfetch
+
+c0='[0m'
+c1='[31m'
+c2='[32m'
+c3='[33m'
+c4='[34m'
+c5='[35m'
+c6='[36m'
+c7='[37m'
+c8='[38m'
+c9='^[[37m'
 
 # Greeting message
 
-h=`date +%H`
+h=$(date +%H)
 
-if [ $h -lt 12 ]; then
+if [ $h -lt 6 ]; then
+  greet="Go to sleep 🌑 "
+elif [ $h -lt 12 ]; then
   greet="Good ${c2}Morning 🌄 "
 elif [ $h -lt 18 ]; then
   greet="Good ${c3}Afternoon 🌆 "
@@ -23,15 +37,19 @@ else
   greet="Good ${c5}Night 🌉 "
 fi
 
-location=`curl -s 'wttr.in?format=%l'`
-weather=`curl -s 'wttr.in?format=%C'`
-temp=`curl -s 'wttr.in?format=%f'`
+# Weather module
 
-# Print
+if [ $showWeather == "true" ]; then
+  temp=$(curl -s 'wttr.in?format=%C')
+  weather="${c0}It's ${c4}${temp}"
+fi
+
+# Main print
+
 cat <<-EOF
 
  Hi ${c2}${user}${c0}, ${greet}
 
- ${c0}It's ${c4}${weather} ${c0}and feels like ${c2}${temp} ${c0}in ${c5}${location}
+ ${weather}
 
 EOF
