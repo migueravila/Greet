@@ -3,7 +3,12 @@
     <b>🌿 A simple greeting message for your shelle</b>
 </div>
 
-### Installation
+## 👇 Index
+- [👇 Index](#-index)
+- [⚙️ Installation](#️-installation)
+- [🎨 Customization](#-customization)
+
+## ⚙️ Installation
 
 1. Clone this repo with `git clone https://github.com/migueravila/Greet.git`
 2. Run `cd Greet`
@@ -11,8 +16,7 @@
 4. Now you can run it with `greet` 
 5. ENJOY! 💻
 
-
-### Customization
+## 🎨 Customization
 
 Here you can change the name for the greeting:
 
